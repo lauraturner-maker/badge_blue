@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent !important;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .northside-badge {
+            width: 100%;
+            max-width: 320px;
+            background-color: #121212 !important;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333333;
+            color: #ffffff !important;
+            position: relative;
+            text-align: center;
+        }
+
+        .header-accent {
+            background-color: #003087 !important;
+            height: 8px;
+            width: 100%;
+        }
+
+        .content {
+            padding: 30px 20px;
+        }
+
+        .logo-area {
+            margin-bottom: 25px;
+        }
+
+        .logo-text {
+            font-size: 15px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #ffffff !important;
+            line-height: 1.2;
+        }
+
+        .logo-text .highlight {
+            color: #003087 !important;
+            background-color: #ffffff !important;
+            padding: 1px 6px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 3px;
+        }
+
+        .logo-subtext {
+            font-size: 10px;
+            color: #aaaaaa !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .qr-wrapper {
+            background: #ffffff !important;
+            padding: 10px;
+            border-radius: 12px;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            background-image: url('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Alex-Sterling-RN-NH-8842-X');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .user-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            color: #ffffff !important;
+        }
+
+        .user-title {
+            font-size: 13px;
+            color: #6699cc !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 6px 0 20px 0;
+            font-weight: 600;
+        }
+
+        .rn-badge {
+            display: inline-block;
+            background-color: #003087 !important;
+            color: #ffffff !important;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #333333;
+            padding-top: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .label {
+            font-size: 10px;
+            color: #777777 !important;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .value {
+            font-size: 13px;
+            font-weight: 500;
+            color: #dddddd !important;
+        }
+
+        .shimmer {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg, 
+                transparent, 
+                rgba(255,255,255,0.08), 
+                transparent
+            );
+            transform: skewX(-20deg);
+            animation: move-shimmer 3s infinite;
+        }
+
+        @keyframes move-shimmer {
+            0% { left: -150%; }
+            40% { left: 150%; }
+            100% { left: 150%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="northside-badge">
+        <div class="shimmer"></div>
+        <div class="header-accent"></div>
+        
+        <div class="content">
+            <div class="logo-area">
+                <div class="logo-text">
+                    <span class="highlight">NORTHSIDE</span><br>
+                    HOSPITAL
+                </div>
+                <div class="logo-subtext">Employee ID</div>
+            </div>
+
+            <div class="qr-wrapper">
+                <div class="qr-code"></div>
+            </div>
+
+            <h2 class="user-name">Alex Sterling</h2>
+            <div class="rn-badge">Registered Nurse · RN</div>
+            <p class="user-title">Nursing Staff</p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Issued</span>
+                    <span class="value">Feb 26, 2026</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">ID Number</span>
+                    <span class="value">NH-8842-X</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
